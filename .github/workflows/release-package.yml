@@ -1,0 +1,41 @@
+name: Node.js Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run build
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://registry.npmjs.org/
+
+      - run: git config --global user.name 'Jon Bilous'
+      - run: git config --global user.email 'jon@jonbilous.com'
+      - run: npm version patch
+      - run: git push
+      - run: npm ci
+      - run: npm run build
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
