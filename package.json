@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "vitest",
-    "build": "tsc"
+    "build": "tsc",
+    "commit": "cz"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,24 @@
   "author": "Jon Bilous",
   "license": "ISC",
   "devDependencies": {
+    "@semantic-release/npm": "^9.0.1",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "semantic-release": "^19.0.2",
     "typescript": "^4.6.3",
     "vitest": "^0.9.3"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/npm"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

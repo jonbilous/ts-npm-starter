@@ -31,10 +31,10 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: git config --global user.name 'Jon Bilous'
       - run: git config --global user.email 'jon@jonbilous.com'
-      - run: npm version patch
+      - run: npx semantic-release
+      - run: git push
       - run: npm ci
       - run: npm run build
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-      - run: git push
