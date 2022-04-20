@@ -36,22 +36,9 @@
     ],
     "plugins": [
       [
-        "@semantic-release/release-notes-generator",
+        "@semantic-release/changelog",
         {
-          "preset": "conventionalcommits",
-          "parserOpts": {
-            "noteKeywords": [
-              "BREAKING CHANGE",
-              "BREAKING CHANGES",
-              "BREAKING"
-            ]
-          },
-          "writerOpts": {
-            "commitsSort": [
-              "subject",
-              "scope"
-            ]
-          }
+          "changelogFile": "CHANGELOG.md"
         }
       ],
       "@semantic-release/npm",
