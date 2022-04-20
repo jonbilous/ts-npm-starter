@@ -8,6 +8,6 @@
 ## Usage
 
 ```bash
-$ git clone git@github.com:jonbilous/ts-npm-starter.git
-$ npm ci
+git clone git@github.com:jonbilous/ts-npm-starter.git
+npm ci
 ```
