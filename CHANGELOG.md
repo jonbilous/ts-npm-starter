@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/jonbilous/ts-npm-starter/compare/v1.16.0...v1.16.1) (2022-04-24)
+
+
+### Bug Fixes
+
+* **package.json:** update package.json ([9d566a6](https://github.com/jonbilous/ts-npm-starter/commit/9d566a6f14daeb7fccb2ef26646684e0b1a3c20d))
+
 # [1.16.0](https://github.com/jonbilous/ts-npm-starter/compare/v1.15.0...v1.16.0) (2022-04-24)
 
 
