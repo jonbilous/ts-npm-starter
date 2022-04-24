@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/jonbilous/ts-npm-starter/compare/v1.14.0...v1.15.0) (2022-04-20)
+
+
+### Features
+
+* **dependencies:** install vite and add config ([431ea7f](https://github.com/jonbilous/ts-npm-starter/commit/431ea7f4f21dfdb6905e1c46fa625fa9b6b29873))
+
 # [1.14.0](https://github.com/jonbilous/ts-npm-starter/compare/v1.13.0...v1.14.0) (2022-04-20)
 
 
